@@ -10,18 +10,18 @@
 
 # The following file will extract the SEC fillings from the EDGAR webpage for all the companies that have submitted a file
 # to the SEC during a certain timeframe, 2000 to 2018 in this case. First, the full index links will be dowloaded, from recurring 
-# 10-K files. Thereafter, only the direct link to 10-K files will be dowloaded as these are the one of interest. 
+# 10-K files. Thereafter, only the direct link to 10-K files will be dowloaded as these are the ones of interest. 
 # Based on the 10-K links, I will extract the full html files by withdrawing the tables and keeping only the full texts. 
 # I clean the dataset by withdrawing stop words, certain key words as "company" or the years of interests or by withdrawing
 # certain html tags. Finally, I count the numbers of positive and negative words in each 10-K file based on two different libraries: 
-# the one from Loughran and McDonald (2016) and the one from Bing Liu. Finally, a polarity score is extracted based on the 
+# the one from Loughran and McDonald and the one from Bing Liu. Finally, a polarity score is extracted based on the 
 # number of positive and negative words from each 10-K file. 
 
 # ATTENTION: The given code below is extremely computational intensive and therefore should not be exectued diretly without
 # using an appropriate machine or slicing the workload in different steps.It is highly discouraged to exectue the code below for an entire
 # timeframe on only one machine and it is adviced to cut the process by year to be able to run it on several machines 
 # to be efficient. If the need arises that the code has to be run in one time, it is recommended to use the service of
-# Google Cloud or Amazon Web Services (AWS)
+# a virtual machine on Google Cloud or Amazon Web Services (AWS)
 
 
 # In[1086]:
@@ -65,8 +65,6 @@ from scipy import stats
 # set working directory
 PATH = r'YOUR PATH HERE'
 os.chdir(PATH)
-
-# In my workings: PATH = '/Users/user/Documents/Uni 19:20/AcF351/Coursework/Test'
 
 
 # In[1091]:
